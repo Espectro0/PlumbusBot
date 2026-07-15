@@ -9,6 +9,7 @@ import (
 
 type Config struct {
 	DiscordToken     string
+	GuildId          string
 	LavalinkHost     string
 	LavalinkPort     string
 	LavalinkPassword string
@@ -17,10 +18,11 @@ type Config struct {
 func LoadConfig() (*Config, error) {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		return nil, err
 	}
 	return &Config{
 		DiscordToken:     mustGetenv("DISCORD_TOKEN"),
+		GuildId:          os.Getenv("DISCORD_GUILD_ID"),
 		LavalinkHost:     mustGetenv("LAVALINK_HOST"),
 		LavalinkPort:     mustGetenv("LAVALINK_PORT"),
 		LavalinkPassword: mustGetenv("LAVALINK_PASSWORD"),
