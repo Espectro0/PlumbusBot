@@ -1,67 +1,43 @@
-# PlumbusBot
+# Plumbus
 
-A Discord bot built with [discordgo](https://github.com/bwmarrin/discordgo).
+<p align="center">
+  <img
+    src="https://media.discordapp.net/attachments/840779056580263967/1527172624273248256/image.png?ex=6a59b1d7&is=6a586057&hm=082be617ec6bcccc169567b1940c37892cbe3f623c0f86d38aa5e5f963cbfd64&=&format=webp&quality=lossless"
+    width="150"
+    alt="Plumbus Logo"
+  />
+</p>
 
-## Features
+<p align="center">
+  A modular Discord bot built with <strong>Go</strong>, featuring slash commands,
+  Lavalink-powered music playback, interactive components, and integrations with external REST APIs.
+</p>
 
-- **`/ping`** — Check if the bot is online.
-- **`/about`** — Check out the info available about the bot.
-- **`/character [name] [id]`** — Displays a character from *Rick and Morty* via the [Rick and Morty API](https://rickandmortyapi.com). Supports searching by name or ID, random character, and paginated results for multiple matches.
-- **Lavalink** — Ready for music playback (configurable via environment variables).
+---
 
-## Requirements
+## ✨ Features
 
-- Go 1.26+
-- Lavalink server (for music features)
+- 🎵 Music playback powered by **Lavalink**
+- 🎮 Modern **Slash Commands**
+- 📖 Character and information commands
+- 📄 Interactive pagination system
+- 🌐 External REST API integrations
+- ⚡ Built with **Go**
+- ❤️ Open Source
 
-## Setup
+## 🚀 Tech Stack
 
-1. Clone the repository:
+- Go
+- Lavalink
+- REST APIs
 
-```bash
-git clone https://github.com/Espectro0/PlumbusBot.git
-cd PlumbusBot
-```
+## 📌 Roadmap
 
-2. Copy the environment file and fill in your credentials:
+- [x] Rick and Morty API Integration
+- [ ] Rick and Morty API Commands
+- [ ] Lavalink Integration
+- [ ] Basic Music Commands
 
-```bash
-cp .env.example .env
-```
+## 👤 Author
 
-3. Edit `.env`:
-
-| Variable | Description |
-|----------|-------------|
-| `DISCORD_TOKEN` | Your Discord bot token |
-| `DISCORD_GUILD_ID` | (Optional) Guild ID for guild-only commands |
-| `LAVALINK_HOST` | Lavalink server host |
-| `LAVALINK_PORT` | Lavalink server port |
-| `LAVALINK_PASSWORD` | Lavalink server password |
-
-4. Build and run:
-
-```bash
-go build -o plumbusbot ./cmd/bot
-./plumbusbot
-```
-
-## Structure
-
-```
-cmd/bot/          — Entry point
-internal/
-  app/            — Application bootstrap and lifecycle
-  config/         — Environment configuration
-  discord/        — Discord session setup
-  ui/             — Embed builder and response helpers
-  commands/
-    paginator/    — Reusable paginated embed system with button navigation
-    utility/      — /ping and /about commands
-    rickandmorty/ — Rick and Morty API integration and /character command
-      api/        — HTTP client with caching and timeout
-```
-
-## Caching
-
-The `/character` command caches API responses in memory for 5 minutes, making repeated searches instant.
+Created with ❤️ by **[Espectro0](https://github.com/Espectro0)**.
