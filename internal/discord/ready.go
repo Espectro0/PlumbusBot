@@ -13,8 +13,8 @@ func ReadyHandler(registry *commands.CommandRegistry) func(s *discordgo.Session,
 			Status: "online",
 			Activities: []*discordgo.Activity{
 				{
-					Name: "Rick and Morty 🛸",
-					Type: discordgo.ActivityTypeWatching,
+					Name: "Plumbus, everyone has one...",
+					Type: discordgo.ActivityTypeListening,
 				},
 			},
 		})

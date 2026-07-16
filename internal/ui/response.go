@@ -2,11 +2,42 @@ package ui
 
 import "github.com/bwmarrin/discordgo"
 
+func RespondDeferred(s *discordgo.Session, i *discordgo.InteractionCreate) error {
+	return s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+		Type: discordgo.InteractionResponseDeferredChannelMessageWithSource,
+	})
+}
+
+func EditOriginal(s *discordgo.Session, i *discordgo.InteractionCreate, embed *discordgo.MessageEmbed) error {
+	_, err := s.InteractionResponseEdit(i.Interaction, &discordgo.WebhookEdit{
+		Embeds: &[]*discordgo.MessageEmbed{embed},
+	})
+	return err
+}
+
+func EditOriginalError(s *discordgo.Session, i *discordgo.InteractionCreate, title, description string) error {
+	embed := NewEmbed().
+		Error().
+		Title(title).
+		Description(description).
+		Build()
+	_, err := s.InteractionResponseEdit(i.Interaction, &discordgo.WebhookEdit{
+		Embeds: &[]*discordgo.MessageEmbed{embed},
+	})
+	return err
+}
+
 func RespondEmbed(
 	s *discordgo.Session,
 	i *discordgo.InteractionCreate,
 	embed *discordgo.MessageEmbed,
+	isEphemeral ...bool,
 ) error {
+
+	flags := discordgo.MessageFlags(0)
+	if len(isEphemeral) > 0 && isEphemeral[0] {
+		flags = discordgo.MessageFlagsEphemeral
+	}
 
 	return s.InteractionRespond(
 		i.Interaction,
@@ -16,6 +47,7 @@ func RespondEmbed(
 				Embeds: []*discordgo.MessageEmbed{
 					embed,
 				},
+				Flags: flags,
 			},
 		},
 	)
@@ -80,7 +112,8 @@ func RespondError(
 		Error().
 		Title(title).
 		Description(description).
+		Timestamp().
 		Build()
 
-	return RespondEmbed(s, i, embed)
+	return RespondEmbed(s, i, embed, true)
 }
