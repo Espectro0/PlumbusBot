@@ -6,7 +6,7 @@
   <tr>
     <td width="160">
       <img
-        src="https://media.discordapp.net/attachments/840779056580263967/1527172624273248256/image.png"
+        src="https://media.discordapp.net/attachments/840779056580263967/1527172624273248256/image.png?ex=6a5a5a97&is=6a590917&hm=b1c2b06d7bde51830075e83a05ce04025e0714717e4d9cdf145c7a7fa5cecff8&=&format=webp&quality=lossless"
         width="140"
         alt="Plumbus Logo"
       />
