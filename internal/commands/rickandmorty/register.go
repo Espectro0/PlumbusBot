@@ -7,4 +7,5 @@ import (
 
 func Register(registry *commands.CommandRegistry, p *paginator.Paginator) {
 	registry.Register(NewCharacterCommand(p))
+	registry.Register(NewLocationCommand(p))
 }

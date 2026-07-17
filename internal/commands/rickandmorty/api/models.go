@@ -17,10 +17,27 @@ type Character struct {
 	} `json:"location"`
 }
 
-type APIResponse struct {
-	Info struct {
-		Count int `json:"count"`
-		Pages int `json:"pages"`
-	} `json:"info"`
+type CharacterAPIResponse struct {
+	Info    Info        `json:"info"`
 	Results []Character `json:"results"`
+}
+
+type Location struct {
+	ID        int      `json:"id"`
+	Name      string   `json:"name"`
+	Type      string   `json:"type"`
+	Dimension string   `json:"dimension"`
+	Residents []string `json:"residents"`
+}
+
+type LocationAPIResponse struct {
+	Info    Info       `json:"info"`
+	Results []Location `json:"results"`
+}
+
+type Info struct {
+	Count int    `json:"count"`
+	Pages int    `json:"pages"`
+	Next  string `json:"next"`
+	Prev  string `json:"prev"`
 }

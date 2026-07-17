@@ -62,17 +62,19 @@ func (c *CharacterCommand) Execute(
 	}
 
 	switch {
+	case id > 0 && name != "":
+		return ui.RespondError(s, i, "Too Many Arguments", "The `name` and `id` options cannot be used together.")
 	case id > 0:
 		char, err := api.GetCharacterById(id)
 		if err != nil {
-			return ui.RespondError(s, i, "404 - Not Found", err.Error())
+			return ui.RespondError(s, i, "Character Not Found", err.Error())
 		}
 		return ui.RespondEmbed(s, i, characterEmbed(char))
 
 	case name != "":
 		chars, err := api.GetCharacterByName(name)
 		if err != nil {
-			return ui.RespondError(s, i, "404 - Not Found", err.Error())
+			return ui.RespondError(s, i, "No Results Found", err.Error())
 		}
 		if len(chars) == 1 {
 			return ui.RespondEmbed(s, i, characterEmbed(&chars[0]))
@@ -83,7 +85,7 @@ func (c *CharacterCommand) Execute(
 	default:
 		char, err := api.RandomCharacter()
 		if err != nil {
-			return ui.RespondError(s, i, "404 - Not Found", "I couldn't retrieve the requested character.")
+			return ui.RespondError(s, i, "No Results Found", "I couldn't retrieve the requested character.")
 		}
 		return ui.RespondEmbed(s, i, characterEmbed(char))
 	}
