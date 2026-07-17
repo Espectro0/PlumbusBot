@@ -1,12 +1,15 @@
 # Plumbus
 
-<p align="center">
+<p align="left">
   <img
     src="https://media.discordapp.net/attachments/840779056580263967/1527172624273248256/image.png?ex=6a59b1d7&is=6a586057&hm=082be617ec6bcccc169567b1940c37892cbe3f623c0f86d38aa5e5f963cbfd64&=&format=webp&quality=lossless"
     width="150"
     alt="Plumbus Logo"
   />
 </p>
+
+> ⚠️ This project is no longer maintained.
+> Plumbus is no longer supported as a Discord bot. The repository will remain available as a personal Go learning project and reference implementation.
 
 <p align="center">
   A modular Discord bot built with <strong>Go</strong>, featuring slash commands,
