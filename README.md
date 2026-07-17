@@ -2,16 +2,20 @@
 > Plumbus is no longer supported as a Discord bot. The repository will remain available as a personal Go learning project and reference implementation.
 
 
-
-<p align="left">
-  <img
-    src="https://media.discordapp.net/attachments/840779056580263967/1527172624273248256/image.png?ex=6a59b1d7&is=6a586057&hm=082be617ec6bcccc169567b1940c37892cbe3f623c0f86d38aa5e5f963cbfd64&=&format=webp&quality=lossless"
-    width="150"
-    alt="Plumbus Logo"
-  />
-
-  # Plumbus
-</p>
+<table>
+  <tr>
+    <td width="160">
+      <img
+        src="https://media.discordapp.net/attachments/840779056580263967/1527172624273248256/image.png"
+        width="140"
+        alt="Plumbus Logo"
+      />
+    </td>
+    <td>
+      <h1>Plumbus</h1>
+    </td>
+  </tr>
+</table>
 
 
 
