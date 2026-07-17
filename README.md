@@ -1,4 +1,7 @@
-# Plumbus
+> ⚠️ This project is no longer maintained.
+> Plumbus is no longer supported as a Discord bot. The repository will remain available as a personal Go learning project and reference implementation.
+
+
 
 <p align="left">
   <img
@@ -6,10 +9,11 @@
     width="150"
     alt="Plumbus Logo"
   />
+
+  # Plumbus
 </p>
 
-> ⚠️ This project is no longer maintained.
-> Plumbus is no longer supported as a Discord bot. The repository will remain available as a personal Go learning project and reference implementation.
+
 
 <p align="center">
   A modular Discord bot built with <strong>Go</strong>, featuring slash commands,
