@@ -8,11 +8,8 @@ import (
 )
 
 type Config struct {
-	DiscordToken     string
-	GuildId          string
-	LavalinkHost     string
-	LavalinkPort     string
-	LavalinkPassword string
+	DiscordToken string
+	GuildId      string
 }
 
 func LoadConfig() (*Config, error) {
@@ -21,11 +18,8 @@ func LoadConfig() (*Config, error) {
 		return nil, err
 	}
 	return &Config{
-		DiscordToken:     mustGetenv("DISCORD_TOKEN"),
-		GuildId:          os.Getenv("DISCORD_GUILD_ID"),
-		LavalinkHost:     mustGetenv("LAVALINK_HOST"),
-		LavalinkPort:     mustGetenv("LAVALINK_PORT"),
-		LavalinkPassword: mustGetenv("LAVALINK_PASSWORD"),
+		DiscordToken: mustGetenv("DISCORD_TOKEN"),
+		GuildId:      os.Getenv("DISCORD_GUILD_ID"),
 	}, nil
 }
 

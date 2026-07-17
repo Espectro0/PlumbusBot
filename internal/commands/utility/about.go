@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"sync"
 
-	api "github.com/Espectro0/PlumbusBot/internal/commands/rickandmorty/api"
+	api "github.com/Espectro0/PlumbusBot/internal/api/rickandmorty"
 	"github.com/Espectro0/PlumbusBot/internal/ui"
 	"github.com/bwmarrin/discordgo"
 )

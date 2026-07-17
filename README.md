@@ -17,7 +17,6 @@
 
 ## ✨ Features
 
-- 🎵 Music playback powered by **Lavalink**
 - 🎮 Modern **Slash Commands**
 - 📖 Character and information commands
 - 📄 Interactive pagination system
@@ -28,16 +27,14 @@
 ## 🚀 Tech Stack
 
 - Go
-- Lavalink
+- DiscordGo
 - REST APIs
 
 ## 📌 Roadmap
 
 - [x] Rick and Morty API Integration
-- [ ] Rick and Morty API Commands
-- [ ] Lavalink Integration
-- [ ] Basic Music Commands
+- [x] Rick and Morty API Commands
 
 ## 👤 Author
 
-Created with ❤️ by **[Espectro0](https://github.com/Espectro0)**.
+Created by **[Espectro0](https://github.com/Espectro0)**.

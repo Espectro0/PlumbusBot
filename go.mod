@@ -4,12 +4,41 @@ go 1.26.5
 
 require (
 	github.com/bwmarrin/discordgo v0.29.0
+	github.com/devgianlu/go-librespot v0.7.4
 	github.com/joho/godotenv v1.5.1
+	golang.org/x/oauth2 v0.34.0
 )
 
+replace github.com/devgianlu/go-librespot => ./lib/go-librespot
+
 require (
+	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
+	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
+	github.com/coder/websocket v1.8.14 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/devgianlu/shannon v0.0.0-20230613115856-82ec90b7fa7e // indirect
+	github.com/godbus/dbus/v5 v5.2.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
-	golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b // indirect
-	golang.org/x/sync v0.22.0 // indirect
-	golang.org/x/sys v0.0.0-20201119102817-f84b799fce68 // indirect
+	github.com/grandcat/zeroconf v1.0.0 // indirect
+	github.com/icza/bitio v1.1.0 // indirect
+	github.com/jfreymuth/oggvorbis v1.0.5 // indirect
+	github.com/jfreymuth/pulse v0.1.2-0.20241102120944-4ffb35054b53 // indirect
+	github.com/jfreymuth/vorbis v1.0.2 // indirect
+	github.com/mewkiz/flac v1.0.13 // indirect
+	github.com/mewkiz/pkg v0.0.0-20250417130911-3f050ff8c56d // indirect
+	github.com/mewpkg/term v0.0.0-20241026122259-37a80af23985 // indirect
+	github.com/miekg/dns v1.1.69 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/sirupsen/logrus v1.9.3 // indirect
+	github.com/stretchr/objx v0.5.3 // indirect
+	github.com/stretchr/testify v1.11.1 // indirect
+	golang.org/x/crypto v0.46.0 // indirect
+	golang.org/x/exp v0.0.0-20251209150349-8475f28825e9 // indirect
+	golang.org/x/mod v0.31.0 // indirect
+	golang.org/x/net v0.48.0 // indirect
+	golang.org/x/sync v0.19.0 // indirect
+	golang.org/x/sys v0.39.0 // indirect
+	golang.org/x/tools v0.40.0 // indirect
+	google.golang.org/protobuf v1.36.11 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

@@ -3,7 +3,7 @@ package rickandmorty
 import (
 	"fmt"
 
-	api "github.com/Espectro0/PlumbusBot/internal/commands/rickandmorty/api"
+	api "github.com/Espectro0/PlumbusBot/internal/api/rickandmorty"
 	"github.com/bwmarrin/discordgo"
 )
 

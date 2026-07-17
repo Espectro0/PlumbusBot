@@ -260,7 +260,7 @@ func navButton(customID, label string, disabled bool) discordgo.MessageComponent
 
 func closeButton() discordgo.MessageComponent {
 	return &discordgo.Button{
-		Style:    discordgo.DangerButton,
+		Style:    discordgo.SecondaryButton,
 		CustomID: ButtonClose,
 		Emoji:    &discordgo.ComponentEmoji{Name: "❌"},
 	}

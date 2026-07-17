@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	api "github.com/Espectro0/PlumbusBot/internal/api/rickandmorty"
 	"github.com/Espectro0/PlumbusBot/internal/commands/paginator"
-	api "github.com/Espectro0/PlumbusBot/internal/commands/rickandmorty/api"
 	"github.com/Espectro0/PlumbusBot/internal/ui"
 	"github.com/bwmarrin/discordgo"
 )
